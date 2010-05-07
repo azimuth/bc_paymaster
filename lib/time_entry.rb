@@ -47,7 +47,7 @@ class TimeEntry
      unless rate_type.nil?
        @rate_key = "#{@company}_#{@rate_type}"
      end
-     @rate = Rates::RATES[@rate_key] || Money.us_dollar(50)
+     @rate = Rates::RATES[@rate_key] or raise "Rate Not Found #{self.inspect}"
   end
   
   private 
