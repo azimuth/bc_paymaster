@@ -53,7 +53,7 @@ class TimeEntry
   private 
   
   def get_rate_type
-    potentials =  /([A-Z]{2,4})/.match(@description)
+    potentials =  /([A-Z0-9]{2,5})/.match(@description)
     unless potentials.nil?
       if not potentials[0].nil? and Rates::RATETYPES[potentials[0]]
         return potentials[0]
