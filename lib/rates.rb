@@ -18,17 +18,23 @@ module Rates
     'SY'   => { :name => "Systems Administration", :default_rate => Money.us_dollar(16000) },
     'SA'   => { :name => "Systems Analysis", :default_rate => Money.us_dollar(16000) },
     'SP'   => { :name => "Systems Planning/Architecture", :default_rate => Money.us_dollar(16000) },
-    'TC'   => { :name => "Technical Consulting", :default_rate => Money.us_dollar(16000) },
+    'TC'   => { :name => "Technical Consulting", :default_rate => Money.us_dollar(14000) },
     'TS'   => { :name => "Technical Support", :default_rate => Money.us_dollar(8000) },
     'DT'   => { :name => "Travel", :default_rate => Money.us_dollar(6000) },
+    'NC'   => { :name => "No Charge to customer", :default_rate => Money.us_dollar(2000)},
     'PDI'  => { :name => "Product Data Integration Flat Rate Project", :default_rate => Money.us_dollar(0) },
+    'P1FR' => { :name => "INITIAL FLAT RATES for RTW", :default_rate => Money.us_dollar(0)}
   }
   
   RATES = {
     "Azimuth Internet Services, Ltd" => Money.us_dollar(2000),
     "Great Coffees of America" => Money.us_dollar(3200),
+    "The Coffee Review, Inc." => Money.us_dollar(5350),
+    "Curaderm Global_PM" => RATETYPES['PM'][:default_rate] / 2,
     "Road Town Wholesale_TC" => RATETYPES['TC'][:default_rate] / 2,
     "Road Town Wholesale_PM" => RATETYPES['PM'][:default_rate] / 2,
-    "Road Town Wholesale_PDI" => Money.us_dollar(0)
+    "Road Town Wholesale_PDI" => Money.us_dollar(0),
+    "Road Town Wholesale_P1FR" => Money.us_dollar(0),
+    "Road Town Wholesale_CC" => RATETYPES['CC'][:default_rate] / 2
   }
 end
