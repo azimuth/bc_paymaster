@@ -6,7 +6,6 @@ Calculate pay for a basecamp time report csv export
 TODO
 ----
 
-* rename project to bc-paymaster 
 * Database rates, rate types, client company
 * Basecamp integration
 * Sinatra-ize (starting interfaces: "Rates and Rate type", "Pay")
@@ -14,7 +13,6 @@ TODO
 combinations (add interface "Payees", alter "Rates and Rate Types", 
 "Pay selection screen (one user or all users)")
 * Add reporting of missing / defaulted RATE_TYPE and RATE entries
-* Handle overtime (requires custom logic and basecamp integration)
 
 USAGE
 -----
