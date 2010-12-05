@@ -1,7 +1,7 @@
 require 'rubygems'
-require 'fastercsv'
 require 'money'
-require 'lib/rates'
+require 'csv'
+require 'rates'
 
 # Represents a TimeEntry from Basecamp
 class TimeEntry
@@ -21,7 +21,7 @@ class TimeEntry
   def TimeEntry.load_csv(file,ignore_first_line=true)
       
     ret = []
-    FasterCSV.foreach(file, :headers => ignore_first_line) do |row|
+    CSV.foreach(file, :headers => ignore_first_line) do |row|
       ret << TimeEntry.new do |t|
         t.date = Date.parse(row[0])
         t.person = row[1]
